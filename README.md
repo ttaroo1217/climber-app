@@ -7,12 +7,12 @@
 | name                 | string 　| null: false |
 | email                | string 　| null: false |
 | encrypted_password   | string 　| null: false |
-| self-introduction    | text 　  |             |
-| sex_id               | string 　| null: false |
-| area_id              | string 　| null: false |
-| weight_id            | string 　| null: false |
-| belay_exp_id         | string 　| null: false |
-| climb_type        　　| string 　| null: false |　　check boxで実装
+| self_introduction    | text 　  |             |
+| sex_id               | integer  | null: false |
+| area_id              | integer 　| null: false |
+| weight_id            | integer 　| null: false |
+| belay_exp_id         | integer 　| null: false |
+| climb_type        　　| integer 　| null: false |　　check boxで実装
 
 
   ### Association
@@ -20,8 +20,18 @@
   - has_many :room_users
   - has_many :rooms, through: room_users
   - has_many :messages
-  - has_many :active_relationships, class_name: "Relationship"
-  - has_many :passive_relationships, class_name: "Relationship"
+  # ====================自分がフォローしているユーザーとの関連 ===================================
+  #フォローする側のUserから見て、フォローされる側のUserを(中間テーブルを介して)集める。なので親はfollowing_id(フォローする側)
+  has_many :active_relationships, class_name: "Relationship", foreign_key: :following_id
+  # 中間テーブルを介して「follower」モデルのUser(フォローされた側)を集めることを「following」と定義
+  has_many :followings, through: :active_relationships, source: :follower
+  # ========================================================================================
+  # ====================自分がフォローされるユーザーとの関連 ===================================
+  #フォローされる側のUserから見て、フォローしてくる側のUserを(中間テーブルを介して)集める。なので親はfollower_id(フォローされる側)
+  has_many :passive_relationships, class_name: "Relationship", foreign_key: :follower_id
+  # 中間テーブルを介して「following」モデルのUser(フォローする側)を集めることを「follower」と定義
+  has_many :followers, through: :passive_relationships, source: :following
+  # =======================================================================================
 
 
 ## relationships テーブル

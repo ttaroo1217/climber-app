@@ -1,0 +1,64 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_area :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :self_introduction %><br />
+    <%= f.text_area :self_introduction, autofocus: true, autocomplete: "self_introduction" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex_id %><br />
+    <%= f.text_area :sex_id, autofocus: true, autocomplete: "sex_id" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :area_id %><br />
+    <%= f.text_area :area_id, autofocus: true, autocomplete: "area_id" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :weight_id %><br />
+    <%= f.text_area :weight_id, autofocus: true, autocomplete: "weight_id" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :belay_exp_id %><br />
+    <%= f.text_area :belay_exp_id, autofocus: true, autocomplete: "belay_exp_id" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :climb_type %><br />
+    <%= f.text_area :climb_type, autofocus: true, autocomplete: "climb_type" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
