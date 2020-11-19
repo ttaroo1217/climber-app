@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 2020_11_16_101926) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.text "self_introduction"
-    t.integer "sex_id", null: false
-    t.integer "area_id", null: false
-    t.integer "weight_id", null: false
-    t.integer "belay_exp_id", null: false
-    t.integer "climb_type", null: false
+    t.integer "sex_id"
+    t.integer "area_id"
+    t.integer "weight_id"
+    t.integer "belay_exp_id"
+    t.integer "climb_type"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

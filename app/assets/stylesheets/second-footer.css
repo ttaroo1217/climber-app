@@ -1,0 +1,27 @@
+footer {
+  color: #b3aeb5;
+  border-top: 1px solid #eee;
+}
+
+
+.second-footer-top {
+  height: 130px;
+  
+}
+
+.second-footer-logo {
+  width: 124px;
+  padding-top: 30px;
+}
+
+.second-footer-contents {
+ display: flex;
+ justify-content: space-around; 
+ align-items: center;
+ margin-top: 30px;
+}
+
+.second-footer-bottom {
+  display: flex;
+  justify-content: center; 
+}

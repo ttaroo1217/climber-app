@@ -1,4 +1,127 @@
-<h1>ようこそ</h1>
+<%= render "shared/header" %>
 
-<%= link_to 'ログイン', "/users/sign_in", class: "login" %>
-<%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "logout" %>
+  <div class="top-wrapper">
+    <div class="container">
+    <%# ここには検索機能を実装する %>
+      <div class="search-area">
+        <h1>hogehogehogehoge<br>hogehogehogehogehogehogehgoe</h1>
+        <br>
+        <P>hogehogehogehogehogehogehgoe</P>
+      </div>
+    <%# ここには検索機能を実装する %>
+    </div>
+  </div>
+
+  <div class="middle-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>hogehogehogehoge!</h2>
+      </div>
+      <div class="middles">
+        <div class="middle">
+          <div class="middle-icon">
+           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="middle-texts">hogehogehogehogehoge</p>
+        </div>
+        <div class="middle">
+          <div class="middle-icon">
+           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="middle-texts">hogehogehogehogehoge</p>
+        </div>
+        <div class="middle">
+          <div class="middle-icon">
+           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="middle-texts">hogehogehogehogehoge</p>
+        </div>
+        <div class="middle">
+          <div class="middle-icon">
+           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="middle-texts">hogehogehogehogehoge</p>
+        </div>
+        <div class="middle">
+          <div class="middle-icon">
+           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="middle-texts">hogehogehogehogehoge</p>
+        </div>
+        <div class="middle">
+          <div class="middle-icon">
+           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="middle-texts">hogehogehogehogehoge</p>
+        </div>
+        <div class="middle">
+          <div class="lesson-icon">
+           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="middle-texts">hogehogehogehogehoge</p>
+        </div>
+        <div class="middle">
+          <div class="middle-icon">
+           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="middle-texts">hogehogehogehogehoge</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom-wrapper">
+    <div class="container">
+      <div class="registration">
+        <%= link_to '新規登録はこちら', "/users/sign_up", class: "btn signup" %>
+        <p>or</p>
+        <br>
+        <a href="#" class="btn facebook"><span class="fa fa-facebook">Facebookで登録</span></a>
+        <a href="#" class="btn twitter"><span class="fa fa-twitter">Twitterで登録</span></a>
+      </div>
+    </div>  
+  </div>
+
+<div class="contents-wrapper">
+    <div class="container">
+      <div class="contents-heading">
+        <h2>トップロープ・リードクライミングができるジム</h2>
+      </div>
+      <div class="contents">
+        <div class="content">
+          <div class="content-icon">
+           <%= link_to image_tag("sample_shops", class:"content-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="content-texts">hogehogehogehogehoge</p>
+        </div>
+        <div class="content">
+          <div class="content-icon">
+           <%= link_to image_tag("sample_shops", class:"content-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="content-texts">hogehogehogehogehoge</p>
+        </div>
+        <div class="content">
+          <div class="content-icon">
+           <%= link_to image_tag("sample_shops", class:"content-logo"), "/" %>
+           <p>hoge</p>
+          </div>
+          <p class="content-texts">hogehogehogehogehoge</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  
+<%= render "shared/footer" %>
