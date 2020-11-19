@@ -8,10 +8,10 @@ class User < ApplicationRecord
   end
 
   with_options numericality: { other_than: 0 } do
-    validates :sex_id
-    validates :area_id
-    validates :weight_id
-    validates :belay_exp_id
+    # validates :sex_id
+    # validates :area_id
+    # validates :weight_id
+    # validates :belay_exp_id
   end
 
   # has_many :room_users

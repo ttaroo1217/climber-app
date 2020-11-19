@@ -2,17 +2,17 @@
 
 ## users テーブル
 
-| Column               | Type   　| Options     |
-| ---------------------| ------ 　| ----------- |
-| name                 | string 　| null: false |
-| email                | string 　| null: false |
-| encrypted_password   | string 　| null: false |
-| self_introduction    | text 　  |             |
+| Column               | Type   | Options     |
+| ---------------------| ------ | ----------- |
+| name                 | string | null: false |
+| email                | string | null: false |
+| encrypted_password   | string | null: false |
+| self_introduction    | text   |             |
 | sex_id               | integer  | null: false |
-| area_id              | integer 　| null: false |
-| weight_id            | integer 　| null: false |
-| belay_exp_id         | integer 　| null: false |
-| climb_type        　　| integer 　| null: false |　　check boxで実装
+| area_id              | integer | null: false |
+| weight_id            | integer | null: false |
+| belay_exp_id         | integer | null: false |
+| climb_type           | integer | null: false | check boxで実装
 
 
   ### Association
@@ -51,11 +51,11 @@
 
 ## messages テーブル
 
-| Column                | Type   　      | Options                              |
+| Column                | Type         | Options                              |
 | --------------------- | -------------- | -------------------------------------|
-| room_id (FK)          | references 　  | null: false, foreign_key: true       |
-| user_id (FK)          | references　   | null: false, foreign_key: true       |
-| message               | string　       | null: false                          |
+| room_id (FK)          | references   | null: false, foreign_key: true       |
+| user_id (FK)          | references   | null: false, foreign_key: true       |
+| message               | string       | null: false                          |
 
   ### Association
 
@@ -64,9 +64,9 @@
 
 ## rooms テーブル
 
-| Column                | Type   　        | Options                              |
+| Column                | Type           | Options                              |
 | --------------------- | --------------  | -------------------------------------|
-|                       | references 　   |                                     |
+|                       | references    |                                     |
 
 
   ### Association
