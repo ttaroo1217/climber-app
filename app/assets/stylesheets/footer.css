@@ -1,0 +1,23 @@
+footer {
+  color: #b3aeb5;
+  border-top: 1px solid #eee;
+}
+
+.footer-top {
+  height: 130px;
+}
+
+footer p {
+  font-size: 12px;
+  padding-bottom: 30px;
+}
+
+.footer-logo {
+  width: 120px;
+  padding-top: 30px; 
+}
+
+.second-footer-contents {
+  display: flex;
+  justify-content: space-between;
+}
