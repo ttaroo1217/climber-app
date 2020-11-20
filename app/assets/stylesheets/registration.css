@@ -1,3 +1,4 @@
+
 .registration-top-wrapper {
   text-align: center;
 }
@@ -30,6 +31,10 @@
   margin-bottom: 30px;
 }
 
+.registration-middle-content h2 {
+  margin-top: 16px;
+}
+
 .registration_form {
   width: 30%;
   margin-top: 5px;
@@ -60,16 +65,22 @@
 }
 
 .registration-middle-submit {
-  text-align: center;
-}
-
-.registration-middle-submit {
   background: #239b76;
   border: 1px solid #239b76;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 16px;
   /* cursor: pointer; */
   width: 30%;
   margin: 30px 30px;
+  text-align: center;
+}
+
+.click-upload p {
+  font-size: 13px;
+  margin: 16px 16px;
+}
+
+.weight-bold-text {
+  /* margin-bottom: 16px; */
 }
