@@ -1,0 +1,64 @@
+<%= render "shared/second-header"%>
+
+<%# 選択したユーザ名が表示されるように編集する %>
+<div class="UserShow-top-wrapper">
+  <div class="container">
+    <div class="UserShow-header-heading">
+      <%= "ユーザ名さん" %>
+    </div>
+  </div>
+</div>
+<%# 選択したユーザ名が表示されるように編集する %>
+
+<div class="container">
+  <div class="UserShow-middle-contents">
+      <%= image_tag "Handdrawn Circle Logo.png", class:"user-box-img" %>
+  </div>
+</div>
+
+<div class="UserShow-middle-wrapper">
+  <div class="container">
+    <div class="UserShow-middle-content">
+      <div class="UserShow-profile-sex">性別<br>
+        <%= "男性" %>
+      </div>  
+      <div class="UserShow-profile-weight">ウェイト<br>
+        <%= "40kg-60kg" %>
+      </div>
+    </div>  
+  </div>
+</div>
+
+<div class="UserShow-middle-wrapper">
+  <div class="container">
+    <div class="UserShow-middle-content">
+      <div class="UserShow-profile-area">よく登るエリア<br>
+        <%= "渋谷" %>
+      </div>
+      <div class="UserShow-profile-ClimbType">クライムタイプ<br>
+        <%= "リードクライミング" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="UserShow-middle-wrapper">
+  <div class="container">
+    <div class="UserShow-profile-introduction">自己紹介<br>
+      <%= "hogehogehogehogehogehogehogehogehogehgoehogehgeo" %>
+    </div>
+  </div>
+</div>
+
+<div class="follow-btn-contents">
+  <div class="container">
+    <div class="follow-btn-content">
+      <%=link_to "フォロー済み", class:"follow-btn"  %>
+    </div>
+    <div class="follow-btn-content">
+      <%=link_to "フォローする", class:"follow-btn"   %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/second-footer"%>

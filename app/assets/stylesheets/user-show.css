@@ -1,0 +1,59 @@
+.UserShow-top-wrapper {
+  text-align: center;
+}
+
+.UserShow-header-heading {
+  line-height: 100px;
+  /* font-weight: bold; */
+  color: #5f5d60;
+  font-size: 100%;
+}
+
+.user-box-img {
+  height: 50vh;
+  width: 60vw;
+  min-height: 500px;
+  background-color: #cdcaca;
+  object-fit: contain;
+}
+
+.UserShow-middle-contents {
+  text-align: center;
+  color: #5f5d60;
+}
+
+.UserShow-middle-wrapper {
+  text-align: center;
+  line-height: 38px;
+  /* font-weight: bold; */
+}
+
+.UserShow-middle-content {
+  display: flex;
+  justify-content: center;
+}
+
+.UserShow-profile-sex {
+  margin-right: 50px;
+}
+
+.UserShow-profile-weight {
+  margin-left: 50px;
+}
+
+.follow-btn-contents {
+  margin-left: 492px;
+}
+
+.follow-btn-content {
+  background: #239b76;
+  border: 1px solid #239b76;
+  color: #fff;
+  line-height: 48px;
+  font-size: 16px;
+  /* cursor: pointer; */
+  width: 30%;
+  margin: 30px 30px;
+  text-align: center;
+}
+
