@@ -1,16 +1,24 @@
 
-.registration-top-wrapper {
+.form-text {
+  display: block;
+}
+
+.UserEdit-top-wrapper {
   text-align: center;
 }
 
-.registration-header-heading {
+.UserEdit-header-heading {
   line-height: 100px;
   /* font-weight: bold; */
   color: #5f5d60;
   font-size: 100%;
 }
 
-.registration-middle-contents {
+.img-upload {
+  margin-top: 30px;
+}
+
+.UserEdit-middle-contents {
   text-align: center;
   color: #5f5d60;
 }
@@ -27,15 +35,15 @@
   resize: none;
 }
 
-.registration-middle-content {
+.UserEdit-middle-content {
   margin-bottom: 30px;
 }
 
-.registration-middle-content h2 {
+.UserEdit-middle-content h2 {
   margin-top: 16px;
 }
 
-.registration_form {
+.UserEdit_form {
   width: 30%;
   margin-top: 5px;
   height: 48px;
@@ -51,20 +59,20 @@
  margin-right: 5px;
 } */
 
-.registration-middle-climb_form p {
+.UserEdit-middle-climb_form p {
   display: inline;
   margin-right: 30px;
 }
 
-.registration-middle-sex h2 {
+.UserEdit-middle-sex h2 {
   margin-bottom: 10px;
 }
 
-.registration-middle-climb_type h2 {
+.UserEdit-middle-climb_type h2 {
   margin-bottom: 10px;
 }
 
-.registration-middle-submit {
+.UserEdit-middle-submit {
   background: #239b76;
   border: 1px solid #239b76;
   color: #fff;
@@ -79,10 +87,6 @@
 .click-upload p {
   font-size: 13px;
   margin: 16px 16px;
-}
-
-.weight-bold-text {
-  /* margin-bottom: 16px; */
 }
 
 .self-introduction_form {

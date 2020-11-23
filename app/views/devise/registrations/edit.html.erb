@@ -1,43 +1,139 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render "shared/second-header"%>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<%# <h2> %>
+  <%# Edit <%= resource_name.to_s.humanize %>
+<%# </h2> %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="UserEdit-top-wrapper">
+  <div class="container">
+    <h1 class="UserEdit-header-heading">プロフィール編集</h1>
   </div>
+</div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+<div class="UserEdit-middle-wrapper">
+  <div class="container">
+    <div class="UserEdit-middle-contents">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="img-upload">
+          <div class="weight-bold-text">
+            プロフィール写真
+          </div>
+          <div class="click-upload">
+            <p>クリックしてファイルをアップロード</p>
+            <%= f.file_field :image, id:"profile-image" %>
+          </div>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <label class="form-text">お名前</label>
+          <%= f.text_area :name, class:"UserEdit_form",  autofocus: true, autocomplete: "name" %>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <label class="form-text">メールアドレス</label>
+          <%= f.email_field :email, class:"UserEdit_form",  autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="UserEdit-middle-content">
+          <label class="form-text">パスワード</label>
+          <%= f.password_field :password, class:"UserEdit_form", autocomplete: "new-password"%>
+          <% if @minimum_password_length %>
+            <br />
+            <em><%= @minimum_password_length %> characters minimum</em>
+          <% end %>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <label class="form-text">パスワード(確認用)</label>
+          <%= f.password_field :password_confirmation, class:"UserEdit_form", autocomplete: "new-password" %>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <label class="form-text">現在のパスワードを入力してください</label>
+          <%= f.password_field :current_password, class:"UserEdit_form", autocomplete: "current-password" %>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <div class="UserEdit-middle-mail">
+            <h2>自己紹介</h2>
+          </div>
+            <div class="UserEdit-middle-mail_form">
+              <%= f.text_area :self_introduction, class:"self-introduction_form", id:"self_introduction", placeholder:"はじめまして。リードクライミングの相手を探しています。" ,rows:"7" ,maxlength:"1000"  ,autofocus: true %>
+            </div>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <div class="UserEdit-middle-area">
+            <h2>よく登るエリア</h2>
+          </div>
+          <div class="UserEdit-middle-area_form">
+            <select name=”area” class="UserEdit_form">
+              <optgroup label=”東京23区”>
+              <option value=”shibuyaku”>渋谷区</option>
+              <option value=”shinjukuku”>新宿区</option>
+              <option value=”minatoku”>港区</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <div class="UserEdit-middle-weight">
+            <h2>ウェイト</h2>
+          </div>
+          <div class="UserEdit-middle-weight_form">
+            <select name=”weight” class="UserEdit_form">
+              <optgroup label=”ウェイト”>
+                <option value=”weight_1”>40kg-60kg</option>
+                <option value=”weight_2”>60kg-80kg</option>
+                <option value=”weight_3”>80kg-100kg</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <div class="UserEdit-middle-sex">
+            <h2>性別</h2>
+          </div>
+          <div class="UserEdit-middle-sex_form">
+            <input type="radio" name="gender" value="male" />男性
+            <input type="radio" name="gender" value="male" checked/>女性
+          </div>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <div class="UserEdit-middle-climb_type">
+            <h2>クライムタイプ</h2>
+          </div>
+          <div class="UserEdit-middle-climb_form">
+            <input class="climb_form" type="checkbox" name="course" value="html"><p>トップロープ</p>
+            <input class="climb_form" type="checkbox" name="course" value="html"><p>リードクライミング</p>
+            <input class="climb_form"  type="checkbox" name="course" value="ruby"><p>ボルダリング</p>
+          </div>
+        </div>
+
+        <div class="UserEdit-middle-content">
+          <%= f.submit "更新", class:"UserEdit-middle-submit"  %>
+        </div>
+      <% end %>
+
+      <div class="UserEdit-middle-content">
+        <label class="form-text">アカウントを削除する</label>
+        <%= button_to "削除", registration_path(resource_name), class:"UserEdit-middle-submit",  data: { confirm: "本当にアカウントを削除しますか?" }, method: :delete %>
+      </div>
+
+      <%= link_to "Back", :back %>
+    </div>
   </div>
+  
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+<%= render "shared/second-footer"%>

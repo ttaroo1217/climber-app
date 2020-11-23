@@ -17,7 +17,7 @@ class User < ApplicationRecord
   # has_many :room_users
   # has_many :rooms, through: room_users
   # has_many :messages
-  
+  has_one_attached :image
 
   # ====================自分がフォローしているユーザーとの関連 ===================================
   #フォローする側のUserから見て、フォローされる側のUserを(中間テーブルを介して)集める。なので親はfollowing_id(フォローする側)

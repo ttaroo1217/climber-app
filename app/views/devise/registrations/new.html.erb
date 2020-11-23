@@ -1,17 +1,30 @@
 <%= render "shared/second-header"%>
 
-  <div class="registration-top-wrapper">
-      <div class="container">
-        <h1 class="second-header-heading">新規会員登録</h1>
-      </div>
+<div class="registration-top-wrapper">
+  <div class="container">
+    <h1 class="registration-header-heading">新規会員登録</h1>
   </div>
+</div>
 
 <div class="registration-middle-wrapper">
   <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+
     <div class="container">
       <div class="registration-middle-contents">
         
         <%= devise_error_messages! %>
+
+        <%# プロフィール画像 %>
+        <div class="img-upload">
+          <div class="weight-bold-text">
+            プロフィール写真
+          </div>
+          <div class="click-upload">
+            <p>クリックしてファイルをアップロード</p>
+            <%= f.file_field :image, id:"profile-image" %>
+          </div>
+        </div>
+        <%# プロフィール画像 %>
 
         <div class="registration-middle-content">
           <div class="registration-middle-name">
@@ -23,12 +36,21 @@
         </div>
 
         <div class="registration-middle-content">
-        <div class="registration-middle-mail">
-          <h2>メールアドレス</h2>
-        </div>
-          <div class="registration-middle-mail_form">
-            <%= f.email_field :email, class:"registration_form", id:"email", placeholder:"email", autofocus: true %>
+          <div class="registration-middle-mail">
+            <h2>メールアドレス</h2>
           </div>
+            <div class="registration-middle-mail_form">
+              <%= f.email_field :email, class:"registration_form", id:"email", placeholder:"email", autofocus: true %>
+            </div>
+        </div>
+
+        <div class="registration-middle-content">
+          <div class="registration-middle-mail">
+            <h2>自己紹介</h2>
+          </div>
+            <div class="registration-middle-mail_form">
+              <%= f.text_area :self_introduction, class:"self-introduction_form", id:"self_introduction", placeholder:"はじめまして。リードクライミングの相手を探しています。" ,rows:"7" ,maxlength:"1000"  ,autofocus: true %>
+            </div>
         </div>
 
         <div class="registration-middle-content">
