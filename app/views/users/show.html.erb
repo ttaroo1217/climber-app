@@ -1,19 +1,23 @@
 <%= render "shared/second-header"%>
 
-<%# 選択したユーザ名が表示されるように編集する %>
 <div class="UserShow-top-wrapper">
   <div class="container">
     <div class="UserShow-header-heading">
-      <%= "ユーザ名さん" %>
+      <%= "#{current_user.name}さん" %>
     </div>
   </div>
 </div>
-<%# 選択したユーザ名が表示されるように編集する %>
 
 <div class="container">
-  <div class="UserShow-middle-contents">
-      <%= image_tag "Handdrawn Circle Logo.png", class:"user-box-img" %>
-  </div>
+  <% if @user.image == nil %>
+    <div class="UserShow-middle-contents">
+      <%= image_tag "profile_sample.png", class: "user-img" %>
+    </div>
+  <% else %>
+    <div class="UserShow-middle-contents">
+      <%= image_tag @user.image, class:"user-box-img" %>
+    </div>
+  <% end %>
 </div>
 
 <div class="UserShow-middle-wrapper">
@@ -45,7 +49,7 @@
 <div class="UserShow-middle-wrapper">
   <div class="container">
     <div class="UserShow-profile-introduction">自己紹介<br>
-      <%= "hogehogehogehogehogehogehogehogehogehgoehogehgeo" %>
+      <%= @user.self_introduction %>
     </div>
   </div>
 </div>
@@ -54,9 +58,17 @@
   <div class="container">
     <div class="follow-btn-content">
       <%=link_to "フォロー済み", class:"follow-btn"  %>
-    </div>
+    </div><br>
     <div class="follow-btn-content">
       <%=link_to "フォローする", class:"follow-btn"   %>
+    </div>
+  </div>
+</div>
+
+<div class="toEdit-btn-contents">
+  <div class="container">
+    <div class="toEdit-btn-content">
+      <%=link_to "プロフィール編集", edit_user_registration_path(@user.id), class:"toEdit-btn"  %>
     </div>
   </div>
 </div>

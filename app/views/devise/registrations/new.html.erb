@@ -36,12 +36,21 @@
         </div>
 
         <div class="registration-middle-content">
-        <div class="registration-middle-mail">
-          <h2>メールアドレス</h2>
-        </div>
-          <div class="registration-middle-mail_form">
-            <%= f.email_field :email, class:"registration_form", id:"email", placeholder:"email", autofocus: true %>
+          <div class="registration-middle-mail">
+            <h2>メールアドレス</h2>
           </div>
+            <div class="registration-middle-mail_form">
+              <%= f.email_field :email, class:"registration_form", id:"email", placeholder:"email", autofocus: true %>
+            </div>
+        </div>
+
+        <div class="registration-middle-content">
+          <div class="registration-middle-mail">
+            <h2>自己紹介</h2>
+          </div>
+            <div class="registration-middle-mail_form">
+              <%= f.text_area :self_introduction, class:"self-introduction_form", id:"self_introduction", placeholder:"はじめまして。リードクライミングの相手を探しています。" ,rows:"7" ,maxlength:"1000"  ,autofocus: true %>
+            </div>
         </div>
 
         <div class="registration-middle-content">
