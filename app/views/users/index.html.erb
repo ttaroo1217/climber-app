@@ -12,72 +12,27 @@
     </div>
   </div>
 
-  <div class="middle-wrapper">
-    <div class="container">
-      <div class="heading">
-        <h2>hogehogehogehoge!</h2>
-      </div>
-      <div class="middles">
-        <div class="middle">
-          <div class="middle-icon">
-           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
-           <p>hoge</p>
-          </div>
-          <p class="middle-texts">hogehogehogehogehoge</p>
-        </div>
-        <div class="middle">
-          <div class="middle-icon">
-           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
-           <p>hoge</p>
-          </div>
-          <p class="middle-texts">hogehogehogehogehoge</p>
-        </div>
-        <div class="middle">
-          <div class="middle-icon">
-           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
-           <p>hoge</p>
-          </div>
-          <p class="middle-texts">hogehogehogehogehoge</p>
-        </div>
-        <div class="middle">
-          <div class="middle-icon">
-           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
-           <p>hoge</p>
-          </div>
-          <p class="middle-texts">hogehogehogehogehoge</p>
-        </div>
-        <div class="middle">
-          <div class="middle-icon">
-           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
-           <p>hoge</p>
-          </div>
-          <p class="middle-texts">hogehogehogehogehoge</p>
-        </div>
-        <div class="middle">
-          <div class="middle-icon">
-           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
-           <p>hoge</p>
-          </div>
-          <p class="middle-texts">hogehogehogehogehoge</p>
-        </div>
-        <div class="middle">
-          <div class="lesson-icon">
-           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
-           <p>hoge</p>
-          </div>
-          <p class="middle-texts">hogehogehogehogehoge</p>
-        </div>
-        <div class="middle">
-          <div class="middle-icon">
-           <%= link_to image_tag("Handdrawn Circle Logo.png", class:"middle-logo"), "/" %>
-           <p>hoge</p>
-          </div>
-          <p class="middle-texts">hogehogehogehogehoge</p>
-        </div>
-      </div>
+<div class="middle-wrapper">
+  <div class="container">
+    <div class="heading">
+      <h2>クライマー</h2>
     </div>
+    <% @users.each do |user| %>
+      <%= link_to user_path(user.id), method: :get do %>
+        <div class="middles">
+          <div class="middle">
+              <div class="middle-icon">
+                <%= image_tag user.image, class:"middle-logo" %>
+              </div>
+              <%= user.name %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
+</div>
 
+<%# ログイン済みな否かでボタン表示を変更する   %>
   <div class="bottom-wrapper">
     <div class="container">
       <div class="registration">
@@ -89,6 +44,7 @@
       </div>
     </div>  
   </div>
+  <%# ログイン済みな否かでボタン表示を変更する   %>
 
 <div class="contents-wrapper">
     <div class="container">
