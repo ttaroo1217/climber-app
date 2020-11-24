@@ -54,23 +54,39 @@
   </div>
 </div>
 
+ 
+<%# フォロー一覧に画面遷移(viewは未だ作成していない) %>
+<%#=link_to "フォロー", follows_user_path(@user.id) %>
+<%#=link_to "フォロワー", followers_user_path(@user.id) %>
+<%# フォロー一覧に画面遷移(viewは未だ作成していない) %>
+
 <div class="follow-btn-contents">
   <div class="container">
-    <div class="follow-btn-content">
-      <%=link_to "フォロー済み", class:"follow-btn"  %>
-    </div><br>
-    <div class="follow-btn-content">
-      <%=link_to "フォローする", class:"follow-btn"   %>
-    </div>
+    <% if current_user != @user %>
+      <% if @user.followed_by?(current_user) %>
+        <div class="follow-btn-content">
+          <p><%=link_to "フォロー済み", user_relationships_path(@user.id), class:"follow-btn", method: :delete %></p>
+        </div>
+      <% else %>
+        <div class="follow-btn-content">
+          <p><%=link_to "フォローする", user_relationships_path(@user.id), method: :post %></p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
+
+<%# 「プロフィール編集」ボタン表示に条件分岐を加え、カレントユーザでないユーザがカレントユーザの詳細ページにアクセスしている時には表示表示させないよう実装する %>
 <div class="toEdit-btn-contents">
   <div class="container">
-    <div class="toEdit-btn-content">
-      <%=link_to "プロフィール編集", edit_user_registration_path(@user.id), class:"toEdit-btn"  %>
-    </div>
+    <% if current_user == @user%>
+      <div class="toEdit-btn-content">
+        <%=link_to "プロフィール編集", edit_user_registration_path(@user.id), class:"toEdit-btn"  %>
+      </div>
+    <% end %>
   </div>
 </div>
+<%# 「プロフィール編集」ボタン表示に条件分岐を加え、カレントユーザでないユーザがカレントユーザの詳細ページにアクセスしている時には表示表示させないよう実装する %>
 
 <%= render "shared/second-footer"%>
