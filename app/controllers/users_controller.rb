@@ -2,11 +2,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    # @follow = current_user.active_relationships.find_by(follower_id: @users)
+    # @follow.save
   end
 
   def show
     @user = User.find(params[:id])
-    # @users = User.all
   end
 
   def edit
