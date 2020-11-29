@@ -18,22 +18,35 @@
       <h2>Your Climbing Partners!</h2>
     </div>
     <% @users.each do |user| %>
-      <%= link_to user_path(user.id), method: :get do %>
-        <div class="middles">
-          <div class="middle">
-              <div class="middle-icon">
-                <%= image_tag user.image, class:"middle-logo" %>
-              </div>
-              <%= user.name %>
-              <%# フォロー済みのユーザは、「フォロー済み」と表示するように実装する %>
-              <%# if user_signed_in? && current_user.id != user.id %>
-                <%# if @follow.follower_id %>
-                  <%#= "フォロー済み" %>
+      <% if user_signed_in? %>
+        <%= link_to user_path(user.id), method: :get do %>
+          <div class="middles">
+            <div class="middle">
+                <div class="middle-icon">
+                  <%= image_tag user.image, class:"middle-logo" %>
+                </div>
+                <%= user.name %>
+                <%# フォロー済みのユーザは、「フォロー済み」と表示するように実装する %>
+                <%# if user_signed_in? && current_user.id != user.id %>
+                  <%# if @follow.follower_id %>
+                    <%#= "フォロー済み" %>
+                  <%# end %>
                 <%# end %>
-              <%# end %>
-              <%# フォロー済みのユーザは、「フォロー済み」と表示するように実装する %>
+                <%# フォロー済みのユーザは、「フォロー済み」と表示するように実装する %>
+            </div>
           </div>
-        </div>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_registration_path, method: :get do %>
+          <div class="middles">
+            <div class="middle">
+                <div class="middle-icon">
+                  <%= image_tag user.image, class:"middle-logo" %>
+                </div>
+                <%= user.name %>
+            </div>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
