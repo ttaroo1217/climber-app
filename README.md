@@ -82,7 +82,7 @@
 - SNS認証：未着手
 
 # データベース設計
-https://gyazo.com/bef6798777dc3cbb685858de691b170b
+- ER図  https://gyazo.com/bef6798777dc3cbb685858de691b170b
 
 # ローカルでの動作方法
 ※ 全機能実装後に展開予定
