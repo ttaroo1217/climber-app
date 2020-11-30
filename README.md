@@ -1,9 +1,9 @@
 
 
 
-# アプリケーション名：Belayers(ビレイヤーズ)
+# アプリケーション名：[Belayers](https://climber-app.herokuapp.com/)
 
-# アプリケーション概要 [Belayers](https://climber-app.herokuapp.com/)
+# アプリケーション概要 
 - クライマーがロープクライミングの相手を、アプリを通して見つけることができます
 - クライマー同士がフォローし合うと、マッチングが成立し、チャットで会話をすることができます。
 
