@@ -37,8 +37,7 @@ https://gyazo.com/879fbb136cc42e2b5f9b3c92cb31f539
 https://gyazo.com/81b6924abf01669c0b911bfdbd6b2583
 
 - ユーザ詳細ページにてプロフィールを確認し、気に入ったら「フォローする」ボタンをクリックする
-
-https://gyazo.com/c097c107e1d6a8da01a08e4f15a2883d
+ https://gyazo.com/c097c107e1d6a8da01a08e4f15a2883d
 
 
 ### チャット機能：進行中
