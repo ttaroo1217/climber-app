@@ -25,7 +25,7 @@
  https://gyazo.com/5d9899077887d3d44c0d6f5ef307878a
 
 
-## マッチング機能：実装完了
+# マッチング機能：実装完了
 - トップページのユーザ一覧(Your Climbing Partners!)にて、気になるユーザをクリックし、プロフィールを確認する
 https://gyazo.com/81b6924abf01669c0b911bfdbd6b2583
 
@@ -33,11 +33,11 @@ https://gyazo.com/81b6924abf01669c0b911bfdbd6b2583
 https://gyazo.com/c097c107e1d6a8da01a08e4f15a2883d
 
 
-## チャット機能：進行中
+# チャット機能：進行中
 
-## SNS認証：未着手
+# SNS認証：未着手
 
-# テスト用アカウント
+## テスト用アカウント
 - ユーザA
 ・メールアドレス：hoge@hoge.com
 ・パスワード：hoge123456
