@@ -48,8 +48,8 @@ https://gyazo.com/81b6924abf01669c0b911bfdbd6b2583
 
 ## テスト用アカウント
 - ユーザA
-メールアドレス：hoge@hoge.com
-パスワード：hoge123456
+-- メールアドレス：hoge@hoge.com
+-- パスワード：hoge123456
 
 - ユーザB
 メールアドレス：sample@sample.com
