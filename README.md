@@ -10,18 +10,18 @@
 ※ belayer(ビレイヤー)とは、ロープクライミングにおけるパートナーの呼称のことです
 
 
-# URL https://climber-app.herokuapp.com/
+- URL https://climber-app.herokuapp.com/
 
 ## ユーザ管理：実装完了
 ### 新規登録
 - 「新規登録」ボタンをクリックし、新規登録ページにアクセスする
-https://gyazo.com/0ed957805b8b4d33c843ff0cb99be167
+ https://gyazo.com/0ed957805b8b4d33c843ff0cb99be167
 
 - 新規登録ページにて、プロフィールを入力し、「会員登録」ボタンをクリックする
-https://gyazo.com/9149879c5077f7afe58670040eb16292
+ https://gyazo.com/9149879c5077f7afe58670040eb16292
 
 - トップページのユーザ一覧(Your Climbing Partners!)にて、作成したアカウントが表される
-https://gyazo.com/5d9899077887d3d44c0d6f5ef307878a
+ https://gyazo.com/5d9899077887d3d44c0d6f5ef307878a
 
 
 - マッチング機能：実装完了
