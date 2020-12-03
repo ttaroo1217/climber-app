@@ -24,14 +24,14 @@
                 <div class="middle-icon">
                   <%= image_tag user.image, class:"middle-logo" %>
                 </div>
-                <%= user.name %>
-                <%# フォロー済みのユーザは、「フォロー済み」と表示するように実装する %>
-                <%# if user_signed_in? && current_user.id != user.id %>
-                  <%# if @follow.follower_id %>
-                    <%#= "フォロー済み" %>
-                  <%# end %>
-                <%# end %>
-                <%# フォロー済みのユーザは、「フォロー済み」と表示するように実装する %>
+                <%= user.name %><br>
+                <% if user_signed_in? && current_user.id != user.id %>
+                  <% @follows.each do |follow| %>
+                    <% if follow.follower_id == user.id%>
+                      <%= "フォロー済み" %>
+                    <% end %>
+                  <%end%>
+                <% end %>
             </div>
           </div>
         <% end %>
