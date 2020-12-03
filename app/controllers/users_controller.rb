@@ -2,8 +2,9 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    # @follow = current_user.active_relationships.find_by(follower_id: @users)
-    # @follow.save
+    if user_signed_in?
+      @follows = current_user.active_relationships.where(follower_id: @users)
+    end
   end
 
   def show
@@ -17,7 +18,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # ==============追加================
   def follows
     user = User.find(params[:id])
     @users = user.followings
@@ -27,6 +27,5 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     @users = user.followers
   end
-# ==============追加================
 
 end
