@@ -144,3 +144,8 @@
   width: 80%;
   display: inline-block;
 }
+
+.follow_mark {
+  color: #239b76;
+  margin-top: 5px;
+}
