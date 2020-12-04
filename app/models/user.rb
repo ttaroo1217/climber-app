@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   with_options presence: true do
     validates :name
+    validates :image
   end
 
   with_options numericality: { other_than: 0 } do
