@@ -28,7 +28,9 @@
                 <% if user_signed_in? && current_user.id != user.id %>
                   <% @follows.each do |follow| %>
                     <% if follow.follower_id == user.id%>
-                      <%= "フォロー済み" %>
+                      <div class="follow_mark">
+                        <%= "フォロー済み" %>
+                      </div>
                     <% end %>
                   <%end%>
                 <% end %>
