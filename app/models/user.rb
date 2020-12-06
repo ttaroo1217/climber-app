@@ -15,8 +15,8 @@ class User < ApplicationRecord
     # validates :belay_exp_id
   end
 
-  # has_many :room_users
-  # has_many :rooms, through: room_users
+  has_many :room_users
+  has_many :rooms, through: :room_users
   # has_many :messages
   has_one_attached :image
 
