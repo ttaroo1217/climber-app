@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2020-11-28T05:10:01.700Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="E0_H0uVPtjjM1F5Ocbr9" version="13.6.5" pages="2">
+<mxfile host="65bd71144e" modified="2020-12-06T05:20:03.189Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.51.1 Chrome/83.0.4103.122 Electron/9.3.3 Safari/537.36" etag="1_2HdXkuNsCy_UOE5vOC" version="13.6.5" pages="2">
     <diagram id="_ojCYP6Sjnz_HEWpKSVc" name="ページ1">
-        <mxGraphModel dx="1310" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="682" dy="496" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -89,13 +89,13 @@
                 <mxCell id="41yVNMawVDTLgyazgO3X-102" value="id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="41yVNMawVDTLgyazgO3X-101" vertex="1">
                     <mxGeometry y="26" width="170" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="41yVNMawVDTLgyazgO3X-103" value="room_id (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="41yVNMawVDTLgyazgO3X-101" vertex="1">
+                <mxCell id="41yVNMawVDTLgyazgO3X-106" value="content" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="41yVNMawVDTLgyazgO3X-101" vertex="1">
                     <mxGeometry y="56" width="170" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="41yVNMawVDTLgyazgO3X-104" value="user_id (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="41yVNMawVDTLgyazgO3X-101" vertex="1">
+                <mxCell id="41yVNMawVDTLgyazgO3X-103" value="room_id (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="41yVNMawVDTLgyazgO3X-101" vertex="1">
                     <mxGeometry y="86" width="170" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="41yVNMawVDTLgyazgO3X-106" value="message" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="41yVNMawVDTLgyazgO3X-101" vertex="1">
+                <mxCell id="41yVNMawVDTLgyazgO3X-104" value="user_id (FK)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="41yVNMawVDTLgyazgO3X-101" vertex="1">
                     <mxGeometry y="116" width="170" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="41yVNMawVDTLgyazgO3X-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=ERmany;endFill=0;endSize=28;" parent="1" source="41yVNMawVDTLgyazgO3X-90" target="41yVNMawVDTLgyazgO3X-52" edge="1">
@@ -141,11 +141,18 @@
         </mxGraphModel>
     </diagram>
     <diagram id="PZqxJS0YT-sNYJTUqFtD" name="ページ2">
+        &#xa;
         <mxGraphModel dx="1310" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            &#xa;
             <root>
+                &#xa;
                 <mxCell id="cuvcbdnsKshPhdCXBxbX-0"/>
+                &#xa;
                 <mxCell id="cuvcbdnsKshPhdCXBxbX-1" parent="cuvcbdnsKshPhdCXBxbX-0"/>
+                &#xa;
             </root>
+            &#xa;
         </mxGraphModel>
+        &#xa;
     </diagram>
 </mxfile>

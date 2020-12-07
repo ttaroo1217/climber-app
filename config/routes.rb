@@ -13,4 +13,7 @@ Rails.application.routes.draw do
     get :followers, on: :member
     resources :messages
   end
+
+  resources :rooms, only: [:new, :create]
+  
 end

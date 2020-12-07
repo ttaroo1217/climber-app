@@ -67,12 +67,13 @@
         <div class="follow-btn-content">
           <p><%=link_to "フォロー済み", user_relationships_path(@user.id), class:"follow-btn", method: :delete %></p>
         </div>
-<<<<<<< Updated upstream
-=======
+
         <div class="message-btn-content">
           <p><%=link_to "チャットルーム", user_messages_path(@user.id), class:"message-btn" %></p>
         </div>
->>>>>>> Stashed changes
+        <div class="message-btn-content">
+          <p><%=link_to "メッセージを送る", "/", class:"message-btn" %></p>
+        </div>
       <% else %>
         <div class="follow-btn-content">
           <p><%=link_to "フォローする", user_relationships_path(@user.id), method: :post %></p>
