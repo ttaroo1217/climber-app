@@ -69,7 +69,7 @@
         </div>
 
         <div class="message-btn-content">
-          <p><%=link_to "チャットルーム", user_messages_path(@user.id), class:"message-btn" %></p>
+          <p><%=link_to "メッセージを送る", user_rooms_path(@user.id), class:"message-btn" %></p>
         </div>
       <% else %>
         <div class="follow-btn-content">

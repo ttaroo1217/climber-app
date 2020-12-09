@@ -1,0 +1,17 @@
+<%= render "shared/second-header"%>
+
+<div class="rooms_top">
+  <div class="container">
+    <h1>チャットルーム</h1>
+    
+    <%# @followss.each do |follow| %>
+      <% if @user.id == @follow.follower.id  %>
+        <%= link_to image_tag(@user.image, class:"footer-logo"), user_messages_path %>
+      <% end %>
+    <%# end %>
+
+  </div>
+</div>
+
+
+<%= render "shared/second-footer"%>
