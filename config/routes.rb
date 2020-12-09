@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/new'
   # get 'relationships/create'
   # get 'relationships/destroy'
 
@@ -10,11 +11,8 @@ Rails.application.routes.draw do
     resource :relationships, only: [:create, :destroy, :index]
     get :follows, on: :member
     get :followers, on: :member
-<<<<<<< Updated upstream
-=======
-    resources :messages
     resources :rooms
->>>>>>> Stashed changes
+    resources :messages
   end
 
   resources :rooms do

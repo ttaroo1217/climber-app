@@ -9,8 +9,6 @@ class RoomsController < ApplicationController
   def new
     @room = Room.new
   end
-<<<<<<< Updated upstream
-=======
 
   def create
     # binding.pry
@@ -29,7 +27,4 @@ class RoomsController < ApplicationController
     room.destroy
     redirect_to root_path
   end
-
-  
->>>>>>> Stashed changes
 end

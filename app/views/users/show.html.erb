@@ -67,33 +67,21 @@
         <div class="follow-btn-content">
           <p><%=link_to "フォロー済み", user_relationships_path(@user.id), class:"follow-btn", method: :delete %></p>
         </div>
+
         <div class="message-btn-content">
-<<<<<<< Updated upstream
-          <p><%=link_to "メッセージを送る", "/", class:"message-btn" %></p>
-=======
           <p><%=link_to "メッセージを送る", user_rooms_path(@user.id), class:"message-btn" %></p>
->>>>>>> Stashed changes
         </div>
       <% else %>
         <div class="follow-btn-content">
           <p><%=link_to "フォローする", user_relationships_path(@user.id), method: :post %></p>
         </div>
       <% end %>
-    <% end %>
-  </div>
-</div>
-
-
-<%# 「プロフィール編集」ボタン表示に条件分岐を加え、カレントユーザでないユーザがカレントユーザの詳細ページにアクセスしている時には表示表示させないよう実装する %>
-<div class="toEdit-btn-contents">
-  <div class="container">
-    <% if current_user == @user%>
+    <% else %>
       <div class="toEdit-btn-content">
         <%=link_to "プロフィール編集", edit_user_registration_path(@user.id), class:"toEdit-btn"  %>
       </div>
     <% end %>
   </div>
 </div>
-<%# 「プロフィール編集」ボタン表示に条件分岐を加え、カレントユーザでないユーザがカレントユーザの詳細ページにアクセスしている時には表示表示させないよう実装する %>
 
 <%= render "shared/second-footer"%>

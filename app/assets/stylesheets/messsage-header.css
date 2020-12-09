@@ -1,0 +1,28 @@
+header {
+  color: #b3aeb5;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+}
+
+
+.message-header-top {
+  height: 160px;
+}
+
+
+.message-UserImage {
+  display: flex;
+  justify-content: center;
+}
+
+.message-header-logo {
+  width: 120px;
+  margin-top: 20px;
+}
+
+.message-UserName {
+  display: flex;
+  justify-content: center;
+}
+
+

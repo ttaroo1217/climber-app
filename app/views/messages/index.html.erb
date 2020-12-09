@@ -1,5 +1,6 @@
 <%= render "shared/message-header"%>
 
+
 <h3>mini_talk_app</h3>
 <%= form_with model: @message do |f| %>
   <%= f.text_field :content %>
@@ -11,6 +12,5 @@
     <p><%= message.content %></p>
   <% end %>
 </div>
-
 
 <%= render "shared/second-footer"%>
