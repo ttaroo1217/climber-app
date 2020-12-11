@@ -1,8 +1,6 @@
 class RoomsController < ApplicationController
   def index
-    # binding.pry
     @user = User.find_by(id: params[:user_id])
-    # @follows = current_user.active_relationships.where(follower_id: @users)
     @follow = current_user.active_relationships.find_by(follower_id: params[:user_id])
   end
   
@@ -12,19 +10,12 @@ class RoomsController < ApplicationController
 
   def create
     # binding.pry
-    @room = Room.new
+    @room = Room.new(room_params)
     @room.save
-    # @room = Room.find(id)
-    # if @room.save
-    #   redirect_to root_path
-    # else
-    #   render :new
-    # end
+    redirect_to user_messages_path
   end
 
-  def destroy
-    room = Room.find(params[:id])
-    room.destroy
-    redirect_to root_path
+  def room_params
+    params.require(:room).permit(user_ids:[])
   end
 end
