@@ -9,8 +9,8 @@
     <% end %>
     <%# end %>
     <%=form_with model: @room, local: true do |f|%>
-      <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %> >
-      <input name="room[user_ids][]" type="hidden"  value=<%= @user.id %> >
+      <input name="room[user_ids][]"  value=<%= current_user.id %> >
+      <input name="room[user_ids][]"  value=<%= @user.id %> >
       <%= f.submit name="チャットルームを作成する", class: 'submit_room'%>
     <% end %>
   </div>
