@@ -9,9 +9,10 @@ class RoomsController < ApplicationController
   end
 
   def create
+    # binding.pry
     @room = Room.new(room_params)
     if @room.save
-      redirect_to user_messages_path
+      redirect_to user_messages_path(room_id: @room.id)
     else
       render :index
     end 
