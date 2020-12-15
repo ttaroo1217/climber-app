@@ -1,5 +1,5 @@
 <div id='messages'>
-  <% @messages.reverse_each do |message| %>
+  <% @messages.each do |message| %>
     <div class="message-date"><%=  message.created_at %></div>
     <div class="message-user"><%= message.user.name %></div>
     <div class="message-content"><%= message.content %></div><br>
