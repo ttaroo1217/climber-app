@@ -1,19 +1,14 @@
 <%= render "shared/message-header"%>
-
-
-<h3>mini_talk_app</h3>
-<%= form_with model: @message do |f| %>
-  <%= f.text_field :content %>
-  <%# if @room_current_user.room_id == @room.room_id %>
-    <input name="room_id" type="hidden" value=<%= @room.room_id %> >
-  <%# end %>
-  <input name="current_user_id" type="hidden" value=<%= current_user.id %> >
-  <%= f.submit '送信' %>
-<% end %>
-<div id='messages'>
-  <% @messages.reverse_each do |message| %>
-    <p><%= message.content %></p>
+<div class="container">
+  <%= form_with model: @message do |f| %>
+    <%= f.text_field :content %>
+    <%# <input name="room_id" value=<%= @room.room_id %> 
+    <%= f.submit '送信' %>
   <% end %>
+
+  <div class="messages">
+    <%= render "shared/chat-message"%>
+  </div>
 </div>
 
 <%= render "shared/second-footer"%>

@@ -1,0 +1,5 @@
+<div id='messages'>
+  <% @messages.reverse_each do |message| %>
+    <p><%= message.content %></p>
+  <% end %>
+</div>
