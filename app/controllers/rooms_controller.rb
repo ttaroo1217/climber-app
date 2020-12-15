@@ -30,4 +30,5 @@ class RoomsController < ApplicationController
     params[:user_id]
     params[:@room_match] 
   end
+  
 end

@@ -5,9 +5,9 @@
 <%= form_with model: @message do |f| %>
   <%= f.text_field :content %>
   <%# if @room_current_user.room_id == @room.room_id %>
-    <input name="room_id" value=<%= @room.room_id %> >
+    <input name="room_id" type="hidden" value=<%= @room.room_id %> >
   <%# end %>
-  <input name="current_user_id"  value=<%= current_user.id %> >
+  <input name="current_user_id" type="hidden" value=<%= current_user.id %> >
   <%= f.submit '送信' %>
 <% end %>
 <div id='messages'>
