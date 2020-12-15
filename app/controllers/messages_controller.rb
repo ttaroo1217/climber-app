@@ -8,6 +8,7 @@ class MessagesController < RoomsController
      @room = RoomUser.find_by(room_id: current_user.room_ids)
      @room = RoomUser.find_by(room_id: params[:room_id])
     #  @room_user = RoomUser.find_by(user_id: params[:user_id])
+
      @messages = Message.all
   end
 
@@ -31,7 +32,7 @@ class MessagesController < RoomsController
   private
 
   def message_params
-    params.permit(:content, :room_id, :user_id)
+    params.permit(:content, :room_id).merge(user_id: current_user.id)
   end
   
 end
