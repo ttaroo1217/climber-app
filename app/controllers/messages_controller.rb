@@ -1,5 +1,6 @@
 class MessagesController < RoomsController
   def index
+    #  binding.pry
      @user = User.find(params[:user_id])
      @messages = Message.all
   end

@@ -1,0 +1,16 @@
+<footer>
+  <div class="message-footer-top">
+    <div class="container">
+      <%= form_with model: @message do |f| %>
+        <div class="message-footers">
+          <div class="message-footer-left">
+            <%= f.text_field :content, class: 'message-field'  %>
+          </div>
+          <div class="message-footer-right">
+            <%= f.submit '送信', class: 'submit-content' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</footer>

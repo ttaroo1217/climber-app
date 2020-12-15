@@ -1,14 +1,9 @@
 <%= render "shared/message-header"%>
-<div class="container">
-  <%= form_with model: @message do |f| %>
-    <%= f.text_field :content %>
-    <%# <input name="room_id" value=<%= @room.room_id %> 
-    <%= f.submit '送信' %>
-  <% end %>
 
+<div class="container">
   <div class="messages">
     <%= render "shared/chat-message"%>
   </div>
 </div>
 
-<%= render "shared/second-footer"%>
+<%= render "shared/message-footer"%>

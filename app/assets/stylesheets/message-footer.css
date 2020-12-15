@@ -1,0 +1,38 @@
+.message-footer-top {
+  height: 130px;
+}
+
+.message-footers {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.message-footer-left {
+  margin: 0 30px;
+}
+
+.message-footer-right {
+  margin: 0 30px;
+}
+
+.message-field {
+  border: 1px solid #434a54;
+  margin: 30px 30px;
+  text-align: center;
+  display: inline-block;
+  line-height: 100px;
+  width: 300px;
+}
+
+.submit-content {
+  background: #239b76;
+  border: 1px solid #239b76;
+  color: #fff;
+  line-height: 48px;
+  font-size: 16px;
+  width: 250%;
+  margin: 30px 30px;
+  text-align: center;
+  display: inline-block;
+}
