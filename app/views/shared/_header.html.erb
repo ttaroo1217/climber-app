@@ -4,21 +4,36 @@
       <div class="header-left">
         <%= link_to image_tag("Handdrawn Circle Logo.png", class:"header-logo"), "/" %>
       </div>
-      <div class="header-right">          
+      <div class="header-right">
         <% if user_signed_in? %>
-          <div class="header-right_button">
-            <%= link_to current_user.name, user_path(current_user.id), class: "button-left" %>
-          </div>
-          <div class="header-right_button">
-            <%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "button-right" %>
+          <div class="signed_in">
+            <div class="header-right_button">
+              <%= link_to current_user.name, user_path(current_user.id), class: "signed_in-button-left" %>
+            </div>
+            <div class="header-right_button">
+              <%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "signed_in-button-right" %>
+            </div>
           </div>
         <% else %>
-          <div class="header-right_button">
-            <%= link_to 'ログイン', "/users/sign_in", class: "button-left" %>
+
+          <div class="login-register">
+            <div class="header-right_button">
+              <%= link_to 'ログイン', "/users/sign_in", class: "login-register-button-left" %>
+            </div>
+            <div class="header-right_button">
+              <%= link_to '新規登録', "/users/sign_up", class: "login-register-button-right" %>
+            </div>
           </div>
-          <div class="header-right_button">
-            <%= link_to '新規登録', "/users/sign_up", class: "button-right" %>
+          
+          <div class="sns-register">
+            <div class="header-right_button">
+              <a href="#" class="btn facebook"><span class="fa fa-facebook">Facebookで登録</span></a>
+            </div>
+            <div class="header-right_button">
+              <a href="#" class="btn google"><span class="fa fa-google">Googleで登録</span></a>
+            </div>
           </div>
+
         <% end %>
       </div>
     </div>

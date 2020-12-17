@@ -13,7 +13,33 @@
   margin-bottom: 3px;
 }
 
-.header-right {
+.signed_in-button-left {
+  margin-right: 50px;
+}
+
+.login-register-button-left {
+  background-color: #239b76;
+  margin-right: 10px;
+  margin-top: 20px;
+  padding: 8px 57px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.login-register-button-right {
+  background-color: #239b76;
+  margin-right: 10px;
+  margin-top: 20px;
+  padding: 8px 57px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.signed_in {
   background-color: rgba(255, 255, 255, 0.3);
   line-height: 65px;
   padding: 0 25px;
@@ -24,6 +50,53 @@
   justify-content: space-between;
 }
 
-.button-left {
-  margin-right: 50px;
+.header-right {
+  background-color: rgba(255, 255, 255, 0.3);
+  /* line-height: 65px; */
+  padding: 0 25px;
+  color: black;
+  display: block;
+  font-size: 16px;
+}
+
+.login-register {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sns-register {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+}
+
+.signup {
+  background-color: #239b76;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.facebook {
+  background-color: #3b5998;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.google {
+  background-color: #55acee;
+  margin-top: 20px;
+  padding: 8px;
+  padding-left:39px;
+  padding-right:39px;
+}
+
+.fa {
+  margin-right: 5px;
 }
