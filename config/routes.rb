@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'users/registrations'
+  }
+  
   get 'messages/new'
-  # get 'relationships/create'
-  # get 'relationships/destroy'
-
   root to: 'users#index'
-  devise_for :users
   resources :users
 
   resources :users do
