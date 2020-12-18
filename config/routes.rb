@@ -4,8 +4,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   
-  get 'messages/new'
   root to: 'users#index'
+  get 'messages/new'
   resources :users
 
   resources :users do
