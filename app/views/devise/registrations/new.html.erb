@@ -57,7 +57,15 @@
           <div class="registration-middle-password">
             <h2>パスワード</h2>
           </div>
+        <%if @sns_id.present? %>  
           <div class="registration-middle-password_form">
+            <%= hidden_field_tag :sns_auth, true %>
+            <%= f.password_field :password, class:"registration_form", id:"password", placeholder:"password" %>
+          </div>
+        <% else %>
+          <div class="registration-middle-password_form">
+            <% @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
             <%= f.password_field :password, class:"registration_form", id:"password", placeholder:"password" %>
           </div>
         </div>
@@ -70,6 +78,7 @@
             <%= f.password_field :password_confirmation, class:"registration_form", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
           </div>
         </div>
+        <% end %>
 
         <div class="registration-middle-content">
           <div class="registration-middle-area">
