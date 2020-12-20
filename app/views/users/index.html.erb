@@ -2,11 +2,13 @@
 
   <div class="top-wrapper">
     <div class="container">
-      <div class="search-area">
-        <br><br>
-        <h1>あなたのクライミングパートナーを<br>みつけよう！</h1>
-        <br>
-        <P>Let's find your belayers.</P>
+      <div class="message-areas"><br>
+        <div class="message-area">
+          <h1>あなたのクライミングパートナーを<br>みつけよう！</h1>
+        </div><br>
+        <div class="message-area">
+          <P>Let's find your belayers.</P>
+        </div>
       </div>
     </div>
   </div>
@@ -16,75 +18,70 @@
     <div class="heading">
       <h2>Your Climbing Partners!</h2>
     </div>
-    <% @users.each do |user| %>
-      <% if user_signed_in? %>
-        <%= link_to user_path(user.id), method: :get do %>
-          <div class="middles">
-            <div class="middle">
-                <div class="middle-icon">
-                  <%= image_tag user.image, class:"middle-logo" %>
-                </div>
-                <%= user.name %><br>
-                <% if user_signed_in? && current_user.id != user.id %>
-                  <% @follows.each do |follow| %>
-                    <% if follow.follower_id == user.id%>
-                      <div class="follow_mark">
-                        <%= "フォロー済み" %>
-                      </div>
-                    <% end %>
-                  <%end%>
-                <% end %>
-            </div>
-          </div>
-        <% end %>
-      <% else %>
-        <%= link_to new_user_registration_path, method: :get do %>
-          <div class="middles">
-            <div class="middle">
-                <div class="middle-icon">
-                  <%= image_tag user.image, class:"middle-logo" %>
-                </div>
-                <%= user.name %>
-            </div>
-          </div>
+    <ul class="middles">
+      <% @users.each do |user| %>
+        <% if user_signed_in? %>
+          <li class="middle">
+            <%= link_to user_path(user.id), method: :get do %>
+              <div class="middle-icon">
+                <%= image_tag user.image, class:"middle-logo" %>
+              </div>
+              <%= "#{user.name}さん" %><br>
+              <% if user_signed_in? && current_user.id != user.id %>
+                <% @follows.each do |follow| %>
+                  <% if follow.follower_id == user.id%>
+                    <div class="follow_mark">
+                      <%= "フォロー済み" %>
+                    </div>
+                  <% end %>
+                <%end%>
+              <% end %>
+            <% end %>  
+          </li>
+        <% else %>
+          <li class="middle">
+            <%= link_to new_user_registration_path, method: :get do %>
+              <div class="middle-icon">
+                <%= image_tag user.image, class:"middle-logo" %>
+              </div>
+              <%= "#{user.name}さん" %>
+            <% end %>
+          </li>
         <% end %>
       <% end %>
-    <% end %>
+    </ul>
   </div>
 </div>
 
 <div class="contents-wrapper">
-    <div class="container">
-      <div class="contents-heading">
-        <h2>トップロープ・リードクライミングができるジム</h2>
+  <div class="container">
+    <div class="contents-heading">
+      <h2>トップロープ・リードクライミングができるジム</h2>
+    </div>
+    <div class="contents">
+      <div class="content">
+        <div class="content-icon">
+          <%= link_to image_tag("sample_shops", class:"content-logo"), "#" %>
+          <p>hoge</p>
+        </div>
+        <p class="content-texts">hogehogehogehogehoge</p>
       </div>
-      <div class="contents">
-        <div class="content">
-          <div class="content-icon">
-           <%= link_to image_tag("sample_shops", class:"content-logo"), "#" %>
-           <p>hoge</p>
-          </div>
-          <p class="content-texts">hogehogehogehogehoge</p>
+      <div class="content">
+        <div class="content-icon">
+          <%= link_to image_tag("sample_shops", class:"content-logo"), "#" %>
+          <p>hoge</p>
         </div>
-        <div class="content">
-          <div class="content-icon">
-           <%= link_to image_tag("sample_shops", class:"content-logo"), "#" %>
-           <p>hoge</p>
-          </div>
-          <p class="content-texts">hogehogehogehogehoge</p>
+        <p class="content-texts">hogehogehogehogehoge</p>
+      </div>
+      <div class="content">
+        <div class="content-icon">
+          <%= link_to image_tag("sample_shops", class:"content-logo"), "#" %>
+          <p>hoge</p>
         </div>
-        <div class="content">
-          <div class="content-icon">
-           <%= link_to image_tag("sample_shops", class:"content-logo"), "#" %>
-           <p>hoge</p>
-          </div>
-          <p class="content-texts">hogehogehogehogehoge</p>
-        </div>
-        
+        <p class="content-texts">hogehogehogehogehoge</p>
       </div>
     </div>
   </div>
+</div>
 
-  
-  
 <%= render "shared/footer" %>

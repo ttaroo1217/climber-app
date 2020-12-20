@@ -8,14 +8,17 @@
   font-weight: bold;
 }
 
-.top-wrapper h1 {
+.message-area h1 {
   opacity: 0.7;
   font-size: 45px;
   letter-spacing: 5px;
 }
 
-.registration {
-  margin-bottom: 30px;
+.message-area p {
+  opacity: 0.7;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-weight: normal;
 }
 
 .middle-wrapper {
@@ -24,20 +27,22 @@
   height: 580px;
 }
 
-.heading {
+.heading h2 {
   padding-top: 80px;
   padding-bottom: 50px;
+  letter-spacing: 2px;
+  font-size: 20px;
 }
 
 .heading h2 {
   color: #5f5d60;
 }
 
-
-.middle {
-  float: left;
-  width: 25%; 
-  justify-content: center;
+.middles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 60px 0;
 }
 
 .middle-icon {
@@ -69,11 +74,7 @@
   background-color: #f7f7f7;
 }
 
-
-/* contents-wrapper */
-
 .contents-wrapper {
-  /* text-align: center; */
   color: #5f5d60;
   background-color: #f7f7f7;
   height: 580px;
@@ -91,14 +92,6 @@
 .contents {
   display: flex;
   justify-content: space-around;
-}
-
-
-.content {
-  
-  float: left;
-  margin: 10px 10px;
-  width: 25%; 
 }
 
 .content-icon {
