@@ -22,17 +22,19 @@
             <div class="header-right_button">
               <%= link_to '新規登録', "/users/sign_up", class: "login-register-button-right" %>
             </div>
-          </div>
-          
+          </div>          
           <div class="sns-registers">
             <div class="header-right_button">
-              <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, class: "facebook",  method: :post%>
+              <%= link_to user_facebook_omniauth_authorize_path, method: :post do %>
+                <i class="fa fa-facebook-official facebook"><span class="icon_space"></span>Facebookでログイン</i>
+              <% end %>
             </div>
             <div class="header-right_button">
-              <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, class: "google", method: :post%>
+              <%= link_to user_google_oauth2_omniauth_authorize_path, method: :post do %>
+                <i class="fa fa-google google"><span class="icon_space"></span>Googleでログイン</i>
+              <% end %>
             </div>
           </div>
-
         <% end %>
       </div>
     </div>

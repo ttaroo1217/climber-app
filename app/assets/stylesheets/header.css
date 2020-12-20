@@ -68,11 +68,15 @@
   justify-content: space-between;
 }
 
+.icon_space {
+  margin-right: 10px;
+}
+
 .facebook {
   background-color: #3b5998;
   margin-right: 10px;
   margin-top: 20px;
-  padding: 8px 24px;
+  padding: 8px 12px;
   color: white;
   display: inline-block;
   opacity: 0.8;
@@ -80,16 +84,12 @@
 }
 
 .google {
-  background-color: #55acee;
-  margin-right: 10px;
+  background-color: #cc3420;
+  margin-right: 10px; 
   margin-top: 20px;
-  padding: 8px 34px;
+  padding: 8px 22px;
   color: white;
   display: inline-block;
   opacity: 0.8;
   border-radius: 4px;
-}
-
-.fa {
-  margin-right: 5px;
 }
