@@ -2,21 +2,20 @@
   <div class="container">
     <div class="header-contents">
       <div class="header-left">
-        <%= link_to image_tag("Handdrawn Circle Logo.png", class:"header-logo"), "/" %>
+        <%= image_tag("Handdrawn Circle Logo.png", class:"header-logo") %>
       </div>
       <div class="header-right">
         <% if user_signed_in? %>
           <div class="signed_in">
             <div class="header-right_button">
-              <%= link_to current_user.name, user_path(current_user.id), class: "signed_in-button-left" %>
+              <%= link_to "#{current_user.name}さん", user_path(current_user.id), class: "signed_in-button-left" %>
             </div>
             <div class="header-right_button">
               <%= link_to 'ログアウト', "/users/sign_out", method: :delete, class: "signed_in-button-right" %>
             </div>
           </div>
         <% else %>
-
-          <div class="login-register">
+          <div class="login-registers">
             <div class="header-right_button">
               <%= link_to 'ログイン', "/users/sign_in", class: "login-register-button-left" %>
             </div>
@@ -25,12 +24,12 @@
             </div>
           </div>
           
-          <div class="sns-register">
+          <div class="sns-registers">
             <div class="header-right_button">
-              <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, class: "btn facebook",  method: :post%>
+              <%= link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, class: "facebook",  method: :post%>
             </div>
             <div class="header-right_button">
-              <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, class: "btn google", method: :post%>
+              <%= link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, class: "google", method: :post%>
             </div>
           </div>
 
