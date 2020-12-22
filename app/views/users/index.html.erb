@@ -15,48 +15,55 @@
 
 <div class="middle-wrapper">
   <div class="container">
-    <div class="heading">
-      <h2>Your Climbing Partners!</h2>
-    </div>
-    <ul class="middles">
-      <% @users.each do |user| %>
-        <% if user_signed_in? %>
-          <li class="middle">
-            <%= link_to user_path(user.id), method: :get do %>
-              <div class="middle-icon">
-                <%= image_tag user.image, class:"middle-logo" %>
-              </div>
-              <div class="middle-discriptions">
-                <div class="middle-name">
-                  <%= "#{user.name}さん" %>
+    <div class="middle-wrapper-contents">
+      <div class="heading">
+        <h2>Your Climbing Partners!</h2>
+      </div>
+      <ul class="middles">
+        <% @users.each do |user| %>
+          <% if user_signed_in? %>
+            <li class="middle">
+              <%= link_to user_path(user.id), method: :get do %>
+                <div class="middle-icon">
+                  <%= image_tag user.image, class:"middle-logo" %>
                 </div>
-                <% if user_signed_in? && current_user.id != user.id %>
-                  <% @follows.each do |follow| %>
-                    <% if follow.follower_id == user.id%>
-                      <div class="follow_mark">
-                        <%= "フォロー済み" %>
-                      </div>
-                    <% end %>
-                  <%end%>
-                <% end %>
-              </div>
-            <% end %>
-          </li>
-        <% else %>
-          <li class="middle">
-            <%= link_to new_user_registration_path, method: :get do %>
-              <div class="middle-icon">
-                <%= image_tag user.image, class:"middle-logo" %>
-              </div>
-              <%= "#{user.name}さん" %>
-            <% end %>
-          </li>
+                <div class="middle-discriptions">
+                  <div class="middle-name">
+                    <%= "#{user.name}さん" %>
+                  </div>
+                  <% if user_signed_in? && current_user.id != user.id %>
+                    <% @follows.each do |follow| %>
+                      <% if follow.follower_id == user.id%>
+                        <div class="follow_mark">
+                          <p class="follow_mark_icon">フォロー済み</p>
+                        </div>
+                      <% end %>
+                    <%end%>
+                  <% end %>
+                </div>
+              <% end %>
+            </li>
+          <% else %>
+            <li class="middle">
+              <%= link_to new_user_registration_path, method: :get do %>
+                <div class="middle-icon">
+                  <%= image_tag user.image, class:"middle-logo" %>
+                </div>
+                <div class="middle-discriptions">
+                  <div class="middle-name">
+                    <%= "#{user.name}さん" %>
+                  </div>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
         <% end %>
-      <% end %>
-    </ul>
+      </ul>
+    </div>
   </div>
 </div>
 
+<%# 店舗情報掲載 %>
 <div class="contents-wrapper">
   <div class="container">
     <div class="contents-heading">
@@ -87,5 +94,6 @@
     </div>
   </div>
 </div>
+<%# 店舗情報掲載 %>
 
 <%= render "shared/footer" %>

@@ -22,7 +22,6 @@
 }
 
 .middle-wrapper {
-  text-align: center;
   background-color: #f7f7f7;
   height: 100%;
 }
@@ -31,14 +30,14 @@
   padding-top: 80px;
   padding-bottom: 50px;
   letter-spacing: 2px;
-  font-size: 20px;
-}
-
-.heading h2 {
+  font-size: 25px;
   color: #5f5d60;
+  font-weight: bold;
+  margin-left: 52px;
 }
 
 .middles {
+  text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -51,23 +50,29 @@
 .middle-discriptions {
   display: flex;
   justify-content: space-evenly;
-
+  margin-top: 5px;
+  margin-bottom: 25px;
 }
 
 .middle-logo {
   width: 33vh;
   height: 33vh;
+  border-radius: 35px;
 }
 
 .middle-name {
   margin: 10px 0;
+  margin-left: 11px;
 }
+
+.middle-icon {
+  display: inline;
+}
+
 
 .middle-icon p {
   color: #b3aeb5;
 }
-
-
 
 .middle-texts {
   color: #b3aeb5;
@@ -91,13 +96,14 @@
   height: 580px;
 }
 
-.contents-heading {
+.contents-heading h2 {
   padding-top: 80px;
-  padding-bottom: 50px;
-}
-
-.heading h2 {
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+  font-size: 25px;
   color: #5f5d60;
+  font-weight: bold;
+  margin-left: 52px;
 }
 
 .contents {
@@ -125,4 +131,12 @@
 .follow_mark {
   color: #239b76;
   margin-top: 5px;
+}
+
+.follow_mark_icon {
+  background-color: #239b76;
+  margin-right: 10px;
+  border-radius: 4px;
+  padding: 5px 5px;
+  color: white;
 }
