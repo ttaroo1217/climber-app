@@ -26,17 +26,21 @@
               <div class="middle-icon">
                 <%= image_tag user.image, class:"middle-logo" %>
               </div>
-              <%= "#{user.name}さん" %><br>
-              <% if user_signed_in? && current_user.id != user.id %>
-                <% @follows.each do |follow| %>
-                  <% if follow.follower_id == user.id%>
-                    <div class="follow_mark">
-                      <%= "フォロー済み" %>
-                    </div>
-                  <% end %>
-                <%end%>
-              <% end %>
-            <% end %>  
+              <div class="middle-discriptions">
+                <div class="middle-name">
+                  <%= "#{user.name}さん" %>
+                </div>
+                <% if user_signed_in? && current_user.id != user.id %>
+                  <% @follows.each do |follow| %>
+                    <% if follow.follower_id == user.id%>
+                      <div class="follow_mark">
+                        <%= "フォロー済み" %>
+                      </div>
+                    <% end %>
+                  <%end%>
+                <% end %>
+              </div>
+            <% end %>
           </li>
         <% else %>
           <li class="middle">

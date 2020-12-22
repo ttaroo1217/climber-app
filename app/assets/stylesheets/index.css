@@ -24,7 +24,7 @@
 .middle-wrapper {
   text-align: center;
   background-color: #f7f7f7;
-  height: 580px;
+  height: 100%;
 }
 
 .heading h2 {
@@ -42,21 +42,32 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 60px 0;
 }
 
-.middle-icon {
-  position: relative;
+.middle {
+  width: 33%;
+}
+
+.middle-discriptions {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.middle-logo {
+  width: 33vh;
+  height: 33vh;
+}
+
+.middle-name {
+  margin: 10px 0;
 }
 
 .middle-icon p {
   color: #b3aeb5;
 }
 
-.middle-logo {
-  width: 100px;
-  margin-top: 20px;
-}
+
 
 .middle-texts {
   color: #b3aeb5;
