@@ -65,7 +65,7 @@
         <% else %>
           <div class="registration-middle-password_form">
             <% @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <em>(<%= @minimum_password_length %> characters minimum)</em><br>
             <%= f.password_field :password, class:"registration_form", id:"password", placeholder:"password" %>
           </div>
         </div>
