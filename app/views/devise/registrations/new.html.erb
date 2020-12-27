@@ -60,7 +60,6 @@
         <%if @sns_id.present? %>  
           <div class="registration-middle-password_form">
             <%= hidden_field_tag :sns_auth, true %>
-            <%= f.password_field :password, class:"registration_form", id:"password", placeholder:"password" %>
           </div>
         <% else %>
           <div class="registration-middle-password_form">
@@ -69,7 +68,6 @@
             <%= f.password_field :password, class:"registration_form", id:"password", placeholder:"password" %>
           </div>
         </div>
-
         <div class="registration-middle-content">
           <div class="registration-middle-password">
             <h2>パスワード ※確認用</h2>
