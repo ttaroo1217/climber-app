@@ -12,11 +12,10 @@ class MessagesController < RoomsController
   end
   
   def create
-    
     @message = Message.new(message_params)
     if @message.save
-      ActionCable.server.broadcast 'message_channel', content: @message
-      # binding.pry
+      ActionCable.server.broadcast 'message_channel', content: @message, user_name: current_user.name
+      
     end
   end
 
