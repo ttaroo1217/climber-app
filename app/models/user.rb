@@ -12,7 +12,6 @@ class User < ApplicationRecord
     # validates :sex_id
     # validates :area_id
     # validates :weight_id
-    # validates :belay_exp_id
   end
 
   has_many :room_users

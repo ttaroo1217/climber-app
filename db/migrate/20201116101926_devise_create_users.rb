@@ -11,7 +11,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.integer :sex_id
       t.integer :area_id
       t.integer :weight_id
-      t.integer :belay_exp_id
       t.integer :climb_type
 
       ## Recoverable
