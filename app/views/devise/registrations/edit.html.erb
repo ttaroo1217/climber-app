@@ -74,7 +74,7 @@
             <h2>よく登るエリア</h2>
           </div>
           <div class="UserEdit-middle-area_form">
-            <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"", id:""}) %>
+            <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"UserEdit_form", id:""}) %>
           </div>
         </div>
 
@@ -83,7 +83,7 @@
             <h2>ウェイト</h2>
           </div>
           <div class="UserEdit-middle-weight_form">
-            <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class:"", id:""}) %>
+            <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class:"UserEdit_form", id:""}) %>
           </div>
         </div>
 
