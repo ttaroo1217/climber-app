@@ -74,13 +74,7 @@
             <h2>よく登るエリア</h2>
           </div>
           <div class="UserEdit-middle-area_form">
-            <select name=”area” class="UserEdit_form">
-              <optgroup label=”東京23区”>
-              <option value=”shibuyaku”>渋谷区</option>
-              <option value=”shinjukuku”>新宿区</option>
-              <option value=”minatoku”>港区</option>
-              </optgroup>
-            </select>
+            <%= f.collection_select(:area_id, Area.all, :id, :name, {}, {class:"", id:""}) %>
           </div>
         </div>
 
@@ -89,13 +83,7 @@
             <h2>ウェイト</h2>
           </div>
           <div class="UserEdit-middle-weight_form">
-            <select name=”weight” class="UserEdit_form">
-              <optgroup label=”ウェイト”>
-                <option value=”weight_1”>40kg-60kg</option>
-                <option value=”weight_2”>60kg-80kg</option>
-                <option value=”weight_3”>80kg-100kg</option>
-              </optgroup>
-            </select>
+            <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class:"", id:""}) %>
           </div>
         </div>
 
