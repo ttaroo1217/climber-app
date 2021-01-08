@@ -11,10 +11,11 @@ class User < ApplicationRecord
   with_options numericality: { other_than: 1 } do
     # validates :sex_id
     validates :area_id
-    # validates :weight_id
+    validates :weight_id
   end
 
   extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :area
   belongs_to :area
 
   has_many :room_users
