@@ -8,11 +8,14 @@ class User < ApplicationRecord
     validates :image
   end
 
-  with_options numericality: { other_than: 0 } do
+  with_options numericality: { other_than: 1 } do
     # validates :sex_id
-    # validates :area_id
+    validates :area_id
     # validates :weight_id
   end
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :area
 
   has_many :room_users
   has_many :rooms, through: :room_users
