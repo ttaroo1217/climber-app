@@ -1,6 +1,6 @@
 class Area < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: 'よく登るエリアを選択してください' },
     { id: 2, name: '足立区' },
     { id: 3, name: '荒川区' },
     { id: 4, name: '板橋区' },
