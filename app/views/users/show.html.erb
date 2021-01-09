@@ -24,10 +24,10 @@
   <div class="container">
     <div class="UserShow-middle-content">
       <div class="UserShow-profile-sex">性別<br>
-        <%= "男性" %>
+        <%= @user.sex_id %>
       </div>  
       <div class="UserShow-profile-weight">ウェイト<br>
-        <%= "40kg-60kg" %>
+        <%= @user.weight.name %>
       </div>
     </div>  
   </div>
@@ -37,7 +37,7 @@
   <div class="container">
     <div class="UserShow-middle-content">
       <div class="UserShow-profile-area">よく登るエリア<br>
-        <%= "渋谷" %>
+        <%= @user.area.name %>
       </div>
       <div class="UserShow-profile-ClimbType">クライムタイプ<br>
         <%= "リードクライミング" %>

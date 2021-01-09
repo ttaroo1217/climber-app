@@ -101,8 +101,7 @@
             <h2>性別</h2>
           </div>
           <div class="registration-middle-sex_form">
-            <input type="radio" name="gender" value="male" />男性
-            <input type="radio" name="gender" value="male" checked/>女性
+            <%= f.collection_radio_buttons :sex_id, User.sex_ids, :first, :last  %>
           </div>
         </div>
 
