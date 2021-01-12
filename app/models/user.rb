@@ -9,10 +9,12 @@ class User < ApplicationRecord
   end
 
   with_options numericality: { other_than: 1 } do
-    validates :sex_id
+    # validates :sex_id
     validates :area_id
     validates :weight_id
   end
+
+  enum sex_id: { male: 1, female: 2 }
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :area
@@ -29,8 +31,6 @@ class User < ApplicationRecord
 
   has_many :passive_relationships, class_name: "Relationship", foreign_key: :follower_id
   has_many :followers, through: :passive_relationships, source: :following
-
-  enum sex_id: { male: 2, female: 3 }
 
   def followed_by?(user)
     passive_relationships.find_by(following_id: user.id).present?

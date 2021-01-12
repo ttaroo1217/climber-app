@@ -11,9 +11,7 @@
 
     <div class="container">
       <div class="registration-middle-contents">
-        
         <%= devise_error_messages! %>
-
         <%# プロフィール画像 %>
         <div class="img-upload">
           <div class="weight-bold-text">
@@ -101,7 +99,8 @@
             <h2>性別</h2>
           </div>
           <div class="registration-middle-sex_form">
-            <%= f.collection_radio_buttons :sex_id, User.sex_ids, :first, :last  %>
+            <%= f.collection_radio_buttons :sex_id, User.sex_ids, :first, :first  %>
+            <%#= f.collection_radio_buttons :sex_id, User.sex_ids %>
           </div>
         </div>
 
@@ -123,7 +122,8 @@
         
       </div>
     </div>
+  <% end %>
 </div>
 
-<% end %>
+
 <%= render "shared/second-footer"%>
