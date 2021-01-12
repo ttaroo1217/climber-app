@@ -14,7 +14,7 @@ class User < ApplicationRecord
     validates :weight_id
   end
 
-  enum sex_id: { male: 1, female: 2 }
+  enum sex_id: { 男: 1, 女: 2 }
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :area
