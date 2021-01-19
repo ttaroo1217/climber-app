@@ -25,6 +25,8 @@ class User < ApplicationRecord
   has_many :messages
   has_one_attached :image
   has_many :sns_credentials, dependent: :destroy
+  has_many :users_climbing_types
+  has_many :climbing_types, through: :users_climbing_types
 
   has_many :active_relationships, class_name: "Relationship", foreign_key: :following_id
   has_many :followings, through: :active_relationships, source: :follower
