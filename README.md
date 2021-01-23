@@ -114,14 +114,16 @@
 | area_id              | integer | null: false |
 | weight_id            | integer | null: false |
 | belay_exp_id         | integer | null: false |
-| climb_type           | integer | null: false | check boxで実装
+| climbing_type        | integer | null: false | check boxで実装
 
 
   ### Association
 
   - has_many :room_users
-  - has_many :rooms, through: room_users
+  - has_many :rooms, through: :room_users
   - has_many :messages
+  - has_many :users_climbing_types
+  - has_many :climbing_types, through: :users_climbing_types
 
   #フォローする側のUserから見て、フォローされる側のUserを(中間テーブルを介して)集める。なので親はfollowing_id(フォローする側)
   has_many :active_relationships, class_name: "Relationship", foreign_key: :following_id
@@ -187,6 +189,30 @@
 
 - belongs_to :room
 - belongs_to :user
+
+## climbing_types テーブル
+
+| Column        | Type    | Options        |
+| ----------------------- | -------------- |
+| climbing_type | integer | null: false    |
+
+
+  ### Association
+
+  - has_many :users_climbing_types
+  - has_many :users, through: :users_climbing_types
+
+## users_climbing_types テーブル
+
+| Column                | Type           | Options                              |
+| --------------------- | -------------- | -------------------------------------|
+| user_id (FK)          | references     | null: false, foreign_key: true       |
+| climbing_type_id (FK) | references     | null: false, foreign_key: true       |
+
+### Association
+
+- belongs_to :user
+- belongs_to :climbing_type
 
 ****************************************************
 

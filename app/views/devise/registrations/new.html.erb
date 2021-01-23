@@ -100,7 +100,6 @@
           </div>
           <div class="registration-middle-sex_form">
             <%= f.collection_radio_buttons :sex_id, User.sex_ids, :first, :first  %>
-            <%#= f.collection_radio_buttons :sex_id, User.sex_ids %>
           </div>
         </div>
 
@@ -109,9 +108,14 @@
             <h2>クライムタイプ</h2>
           </div>
           <div class="registration-middle-climb_form">
-            <input class="climb_form" type="checkbox" name="course" value="html"><p>トップロープ</p>
+            <%# <input class="climb_form" type="checkbox" name="course" value="html"><p>トップロープ</p>
             <input class="climb_form" type="checkbox" name="course" value="html"><p>リードクライミング</p>
-            <input class="climb_form"  type="checkbox" name="course" value="ruby"><p>ボルダリング</p>
+            <input class="climb_form"  type="checkbox" name="course" value="ruby"><p>ボルダリング</p> %>
+            <%#= f.collection_check_boxes :climbing_types, User.climbing_types, :id, :name_with_initial %>
+            <%#= f.collection_check_boxes :climbing_type, User.climbing_types, :first, :first, include_hidden: false  %>
+            <%= f.collection_check_boxes(:climbing_types, ClimbingType.climbing_types, :first, :first, include_hidden: false) do |c| %>
+              <%= c.label { c.check_box + c.text } %>
+            <% end %>
           </div>
         </div>
 
