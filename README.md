@@ -114,7 +114,7 @@
 | area_id              | integer | null: false |
 | weight_id            | integer | null: false |
 | belay_exp_id         | integer | null: false |
-| climb_type           | integer | null: false | check boxで実装
+| climbing_type        | integer | null: false | check boxで実装
 
 
   ### Association

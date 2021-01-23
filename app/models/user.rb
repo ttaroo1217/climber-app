@@ -9,12 +9,12 @@ class User < ApplicationRecord
   end
 
   with_options numericality: { other_than: 1 } do
-    # validates :sex_id
     validates :area_id
     validates :weight_id
   end
 
   enum sex_id: { 男: 1, 女: 2 }
+  # enum climbing_type: { ボルダリング: 1, リードクライミング: 2, トップロープ: 3 }
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :area

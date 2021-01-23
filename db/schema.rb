@@ -87,7 +87,6 @@ ActiveRecord::Schema.define(version: 2021_01_19_125009) do
     t.integer "sex_id"
     t.integer "area_id"
     t.integer "weight_id"
-    t.integer "climb_type"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
